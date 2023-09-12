@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Norse';
-  src: url(/font/Norse-Bold.otf);
+  src: url(font/Norse-Bold.otf);
 }
 
 :root {
@@ -44,7 +44,7 @@ body {
 
 .img-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/img/lake.avif');
+    url('img/lake.avif');
   background-position: center;
   background-size: cover;
   width: 37%;

@@ -34,35 +34,35 @@
                         <p class="cta-text">Let's do it!</p>
                         <div class="inputs">
                             <div class="form-control">
-                                <label for="first-name" class="form-label">First name</label>
+                                <label for="first-name" class="form-label">First name (required)</label>
                                 <input id="first-name" name="first-name" type="text" class="form-input"
                                     placeholder="Thor" required>
-                                <p class="error-message">&nbsp;</p>
+                                <p class="error-message" id="error-first-name">&nbsp;</p>
                             </div>
                             <div class="form-control">
                                 <label for="last-name" class="form-label">Last name</label>
                                 <input id="last-name" name="last-name" type="text" class="form-input"
                                     placeholder="Odinson" required>
-                                <p class="error-message">&nbsp;</p>
+                                <p class="error-message" id="error-last-name">&nbsp;</p>
 
                             </div>
                             <div class="form-control">
-                                <label for="email" class="form-label">Email</label>
+                                <label for="email" class="form-label">Email (required)</label>
                                 <input id="email" name="email" type="email" class="form-input"
-                                    placeholder="thor@valhalla-mail.no" required>
-                                <p class="error-message">&nbsp;</p>
+                                    placeholder="thor@valhalla-mail.no" required autocomplete="username">
+                                <p class="error-message" id="error-email">&nbsp;</p>
 
                             </div>
                             <div class="form-control">
                                 <label for="phone" class="form-label">Phone number</label>
                                 <input id="phone" name="phone" type="tel" class="form-input" placeholder="+1234567890">
-                                <p class="error-message">&nbsp;</p>
+                                <p class="error-message" id="error-tel">&nbsp;</p>
                             </div>
                             <div class="form-control">
-                                <label for="password" class="form-label error">Password</label>
+                                <label for="new-password" class="form-label error">Password</label>
                                 <div class="password-container">
-                                    <input id="password" name="password" type="password" class="form-input error"
-                                        required>
+                                    <input id="new-password" name="password" type="password" class="form-input" required
+                                        autocomplete="new-password">
                                     <button type="button" class="btn-show" id="password-show"><svg
                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -80,7 +80,7 @@
                                     </div>
                                     <div class="strength-level">
                                         <div class="level-rect level-medium"></div>
-                                        <p class="level-label">Medium</p>
+                                        <p class="level-label">Acceptable</p>
                                     </div>
                                     <div class="strength-level">
                                         <div class="level-rect level-strong"></div>
@@ -91,7 +91,8 @@
                             <div class="form-control">
                                 <label for="confirm" class="form-label">Confirm password</label>
                                 <div class="password-container">
-                                    <input id="confirm" name="confirm" type="password" class="form-input error">
+                                    <input id="confirm" name="confirm" type="password" class="form-input" required
+                                        autocomplete="new-password">
                                     <button type="button" class="btn-show" id="confirm-show"><svg
                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -102,12 +103,12 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <p class="error-message">Passwords do not match!</p>
+                                <p class="error-message" id="error-confirm"></p>
                             </div>
                         </div>
                     </div>
                     <div class="btn-container">
-                        <button class="submit-btn" type="button">Create account</button>
+                        <button class="submit-btn" id="submit-btn" type="submit" disabled>Create account</button>
                         <p class="log-in-text">Already have an account? <a href="#">Log in</a></p>
                     </div>
                 </form>

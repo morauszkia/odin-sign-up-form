@@ -12,6 +12,7 @@
   --error: #dc2626;
   --medium: #ea580c;
   --strong: #65a30d;
+  --font-small: 1.2rem;
   --font-normal: 1.6rem;
   --font-medium: 2.4rem;
   --font-xl: 9.6rem;
@@ -33,7 +34,7 @@ body {
   width: min(100vw, 1300px);
   height: 100vh;
   margin: 0 auto;
-  font-size: 1.6rem;
+  font-size: var(--font-normal);
 }
 
 .container {
@@ -139,7 +140,7 @@ body {
 }
 
 .form-label {
-  font-size: 1.2rem;
+  font-size: var(--font-small);
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -167,7 +168,7 @@ body {
 .error-message {
   color: var(--error);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: var(--font-small);
 }
 
 .password-container {
@@ -213,7 +214,7 @@ body {
 }
 
 .level-label {
-  font-size: 1.2rem;
+  font-size: var(--font-small);
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -238,7 +239,7 @@ body {
 
 .submit-btn {
   font-family: inherit;
-  font-size: 1.6rem;
+  font-size: var(--font-normal);
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
@@ -260,6 +261,17 @@ body {
 .submit-btn:active {
   transform: scale(0.97);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:disabled {
+  background-color: var(--light-slate--2);
+  color: var(--slate);
+  cursor: not-allowed;
+}
+
+.submit-btn:disabled:hover {
+  transform: scale(1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .log-in-text {
